@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <com.example.myapplication.Face
+        android:id="@+id/currentFace"
+        android:layout_width="500dp"
+        android:layout_height="750dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/hairRadio"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/radio_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/currentFace"
+        app:layout_constraintTop_toBottomOf="@+id/greenSeekBar"
+        tools:text="Hair" />
+
+    <RadioButton
+        android:id="@+id/eyeRadio"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:text="@string/radio_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/currentFace"
+        app:layout_constraintTop_toBottomOf="@+id/hairRadio"
+        tools:text="Eyes" />
+
+    <RadioButton
+        android:id="@+id/skinRadio"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="96dp"
+        android:text="@string/radio_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/currentFace"
+        app:layout_constraintTop_toBottomOf="@+id/greenSeekBar"
+        tools:text="Skin" />
+
+    <TextView
+        android:id="@+id/redText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/red"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/blueText"
+        app:layout_constraintStart_toEndOf="@+id/currentFace" />
+
+    <TextView
+        android:id="@+id/blueText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/blue"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/greenText"
+        app:layout_constraintStart_toEndOf="@+id/currentFace" />
+
+    <TextView
+        android:id="@+id/greenText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/green"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/hairRadio"
+        app:layout_constraintStart_toEndOf="@+id/currentFace" />
+
+    <SeekBar
+        android:id="@+id/redSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:progress="255"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/redText"
+        app:layout_constraintTop_toBottomOf="@+id/hairStyleSpinner" />
+
+    <SeekBar
+        android:id="@+id/blueSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:progress="255"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/blueText"
+        app:layout_constraintTop_toBottomOf="@+id/redSeekBar" />
+
+    <SeekBar
+        android:id="@+id/greenSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:progress="255"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/greenText"
+        app:layout_constraintTop_toBottomOf="@+id/blueSeekBar" />
+
+    <Button
+        android:id="@+id/faceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:layout_marginTop="88dp"
+        android:text="Random Face"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/currentFace"
+        app:layout_constraintTop_toBottomOf="@+id/hairRadio" />
+
+    <Spinner
+        android:id="@+id/hairStyleSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/currentFace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

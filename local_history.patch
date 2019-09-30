@@ -1,0 +1,30 @@
+Index: app/src/main/java/com/example/myapplication/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/myapplication/MainActivity.java	(date 1569862379123)
++++ app/src/main/java/com/example/myapplication/MainActivity.java	(date 1569862379123)
+@@ -16,6 +16,14 @@
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_main);
+ 
++        /**
++         * External Citation
++         *   Date: 29 September 2019
++         *   Problem: Did not know how to get spinner options
++         *   Resource: https://www.youtube.com/watch?v=npckz4GGxEs
++         *
++         *   Solution: I followed similar directions from the video.
++         */
+         Spinner = findViewById(R.id.hairStyleSpinner);
+         ArrayList<String> list = new ArrayList<>();
+         list.add("Hairstyle 1"); //options for each hairstyle
+@@ -27,7 +35,6 @@
+         Spinner.setAdapter(adapter);
+ 
+         Face face = findViewById(R.id.currentFace);
+-        face.
+     }
+ 
+ }
